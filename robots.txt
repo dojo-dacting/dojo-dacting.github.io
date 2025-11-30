@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /mention-legal.html
+
+Sitemap: https://dojo-dacting.github.io/sitemap.xml

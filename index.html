@@ -874,6 +874,56 @@
             color: white;
         }
 
+        /* Newsletter Checkbox Group */
+        .newsletter-group {
+            margin-bottom: 20px;
+        }
+
+        .newsletter-group > label {
+            display: block;
+            margin-bottom: 12px;
+            color: #1A1A1A;
+            font-weight: 600;
+        }
+
+        .newsletter-checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            border: 2px solid #EBEBEB;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .newsletter-checkbox-wrapper:hover {
+            border-color: var(--gold-light);
+            background: #FAFAFA;
+        }
+
+        .newsletter-checkbox-wrapper:has(input:checked) {
+            border-color: var(--gold);
+            background: #FBF7ED;
+        }
+
+        .newsletter-checkbox-wrapper input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: var(--gold);
+            margin: 0;
+        }
+
+        .newsletter-checkbox-wrapper p {
+            margin: 0;
+            color: #1A1A1A;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .contact-buttons {
                 grid-template-columns: 1fr;
@@ -1373,6 +1423,14 @@
                 <input type="email" id="email" placeholder="jean.dupont@email.com" required>
             </div>
 
+            <div class="newsletter-group">
+                <label for="newsletter">Êtes-vous intéressé par la newsletter ?</label>
+                <div class="newsletter-checkbox-wrapper">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <p>Oui, je souhaite recevoir la newsletter</p>
+                </div>
+            </div>
+
             <div class="modal-buttons">
                 <button class="cancel-btn" id="cancelBtn">Annuler</button>
                 <button class="submit-btn" id="submitBtn">Envoyer</button>
@@ -1457,7 +1515,7 @@
         //      Calendar functionnality
         //===========================================================+
 
-        const URL = "https://script.google.com/macros/s/AKfycbwIdrdr9N58Znux5FGC2Gh0Bg96ukk8SavpvtWjjsgC69RYerdBV67xyLPxMe08KEHv/exec";
+        const URL = "https://script.google.com/macros/s/AKfycbztNGQmQ71is2OzbZbsYbQbtsAdPIyUI5R7qcexpZaJnwd_-8NrAVa0O4iHnMrP2YM4/exec";
 
         const months = [
             'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
@@ -1484,6 +1542,7 @@
         const eventOverlay = document.getElementById('eventOverlay');
         const eventDetails = document.getElementById('event-details');
         const confirmOkBtn = document.getElementById('confirmOkBtn');
+        const newsletter = document.getElementById('newsletter');
 
         function hasEvent(year, month, day) {
             const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -1765,6 +1824,7 @@
                 formData.append('nom', name);
                 formData.append('email', email);
                 formData.append('date', selectedDate.toISOString());
+                formData.append('newsletter', newsletter.checked);
 
                 console.log(formData);
 

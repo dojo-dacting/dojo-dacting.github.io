@@ -157,6 +157,7 @@
         }
 
         :root {
+            /* Standard */
             --primary: #8B1538;
             --primary-dark: #6B0F2A;
             --primary-light: #A01B42;
@@ -165,6 +166,11 @@
             --dark: #1A1A1A;
             --gray: #6B6B6B;
             --light-gray: #FAFAFA;
+
+            /* Intensive  */
+            --green: #0A3E0A;
+            --green-dark: #031603;
+            --green-light: #E9FCE9;  
         }
 
         html {
@@ -1001,6 +1007,10 @@
             padding: 60px 2rem;
         }
 
+        .formule-title {
+            color: var(--green) !important;
+        }
+
         .formule-container {
             margin: 0 auto;
         }
@@ -1009,8 +1019,7 @@
             background: white;
             border-radius: 20px;
             padding: 2.5rem;
-            box-shadow: 0 10px 40px rgba(139, 21, 56, 0.1);
-            /*border-left: 5px solid var(--gold);*/
+            box-shadow: 0 10px 40px rgba(44, 95, 45, 0.1);
         }
 
         .formule-intro {
@@ -1021,12 +1030,12 @@
         }
 
         .formule-intro strong {
-            color: var(--primary);
+            color: var(--green);
         }
 
         .formule-program {
-            background: var(--light-gray);
-            border-left: 4px solid var(--gold);
+            background: var(--green-light);
+            border-left: 4px solid var(--green);
             padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 8px;
@@ -1040,7 +1049,7 @@
         }
 
         .formule-program-title strong {
-            color: var(--gold);
+            color: var(--green-dark);
             font-size: 1.1rem;
         }
 
@@ -1052,11 +1061,11 @@
         }
 
         .formule-program ul li strong {
-            color: var(--primary);
+            color: var(--green);
         }
 
         .formule-price {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: var(--green);
             border-radius: 15px;
             padding: 2rem;
             margin: 2rem 0;
@@ -1078,7 +1087,7 @@
         }
 
         .formule-bonus {
-            background: #FFF4E6;
+            background: #E9FCE9;
             border-radius: 12px;
             padding: 1.5rem;
             text-align: center;
@@ -1459,7 +1468,7 @@
     <!-- Formule Intensive Section -->
     <section id="formule-intensive" class="formule-intensive">
         <div class="formule-container">
-            <h2>Formule Intensive</h2>
+            <h2 class="formule-title">Formule Intensive</h2>
             
             <div class="formule-card">
                 <p class="formule-intro">

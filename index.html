@@ -995,6 +995,222 @@
             font-style: italic;
         }
 
+        /* Formule Intensive Section */
+        .formule-intensive {
+            background: inherit;
+            padding: 60px 2rem;
+        }
+
+        .formule-container {
+            margin: 0 auto;
+        }
+
+        .formule-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(139, 21, 56, 0.1);
+            /*border-left: 5px solid var(--gold);*/
+        }
+
+        .formule-intro {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .formule-intro strong {
+            color: var(--primary);
+        }
+
+        .formule-program {
+            background: var(--light-gray);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .formule-program-title {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .formule-program-title strong {
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .formule-program ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+            line-height: 1.8;
+            color: var(--dark);
+        }
+
+        .formule-program ul li strong {
+            color: var(--primary);
+        }
+
+        .formule-price {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .formule-price-amount {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .formule-price-details {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .formule-bonus {
+            background: #FFF4E6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .formule-bonus-title {
+            color: var(--primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .formule-contact {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        .formule-contact a {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .formule-contact a:hover {
+            color: var(--gold-light);
+        }
+
+        /* Responsive pour tablettes */
+        @media (max-width: 768px) {
+            .formule-intensive {
+                padding: 40px 1rem;
+            }
+
+            .formule-card {
+                padding: 1.5rem;
+            }
+
+            .formule-intro {
+                font-size: 1rem;
+            }
+
+            .formule-program-title {
+                font-size: 1rem;
+            }
+
+            .formule-program ul {
+                font-size: 0.95rem;
+                padding-left: 1.2rem;
+            }
+
+            .formule-price {
+                padding: 1.5rem;
+            }
+
+            .formule-price-amount {
+                font-size: 1.75rem;
+            }
+
+            .formule-price-details {
+                font-size: 1rem;
+            }
+
+            .formule-bonus {
+                padding: 1.2rem;
+            }
+
+            .formule-bonus-title {
+                font-size: 1rem;
+            }
+
+            .formule-contact {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Responsive pour mobiles */
+        @media (max-width: 480px) {
+            .formule-intensive {
+                padding: 30px 1rem;
+            }
+
+            .formule-card {
+                padding: 1.2rem;
+            }
+
+            .formule-intro {
+                font-size: 0.95rem;
+            }
+
+            .formule-program {
+                padding: 1rem;
+            }
+
+            .formule-program-title {
+                font-size: 0.95rem;
+            }
+
+            .formule-program-title strong {
+                font-size: 1rem;
+            }
+
+            .formule-program ul {
+                font-size: 0.9rem;
+            }
+
+            .formule-price {
+                padding: 1.2rem;
+            }
+
+            .formule-price-amount {
+                font-size: 1.5rem;
+            }
+
+            .formule-price-details {
+                font-size: 0.95rem;
+            }
+
+            .formule-bonus {
+                padding: 1rem;
+            }
+
+            .formule-bonus-title {
+                font-size: 0.95rem;
+            }
+
+            .formule-contact {
+                font-size: 0.85rem;
+            }
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             .burger {
@@ -1220,6 +1436,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#formule-intensive">La formule intensive</a></li>
                 <li><a href="#philosophie">Philosophie</a></li>
                 <li><a href="#inscription">Inscription</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1237,6 +1454,50 @@
         <h1>Bienvenue au Dojo d'Acting</h1>
         <p>Une solution pour celles et ceux qui souhaitent pratiquer leur art.<b> 10 - 20€ / jour.</b> Tous niveaux bienvenus.</p>
         <a href="#inscription" class="cta-button">Rejoindre un entraînement</a>
+    </section>
+
+    <!-- Formule Intensive Section -->
+    <section id="formule-intensive" class="formule-intensive">
+        <div class="formule-container">
+            <h2>Formule Intensive</h2>
+            
+            <div class="formule-card">
+                <p class="formule-intro">
+                    Perfectionnez votre jeu pendant <strong>6 semaines</strong> avec la formule intensive, à raison de <strong>4 heures (13h à 17h)</strong> tous les <strong>mardis</strong>.
+                </p>
+                
+                <div class="formule-program">
+                    <p class="formule-program-title">
+                        <strong>Au programme</strong>, à l'aide d'outils de <strong>CHEKHOV</strong> ou de <strong>STANISLAVSKY</strong> :
+                    </p>
+                    <ul>
+                        <li>Être efficace rapidement pour un casting</li>
+                        <li>Appliquer les outils au texte</li>
+                        <li>Aiguiser le pouvoir de la volonté, l'entraînement du corps, de la sensation et de la radiation de l'intention</li>
+                        <li>L'échange d'énergie entre partenaires de jeu</li>
+                        <li>Être à l'aise et vibrant face caméra ou face public</li>
+                        <li><strong>Le tout orienté sur un texte</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="formule-price">
+                    <p class="formule-price-amount">150€</p>
+                    <p class="formule-price-details">
+                        Pour un module de <strong>6 journées</strong><br>
+                        <strong>🔥 24h d'entraînements intensifs</strong> + captation filmée de votre travail
+                    </p>
+                </div>
+                
+                <div class="formule-bonus">
+                    <p class="formule-bonus-title">
+                        🎬 Repartez avec un extrait filmé de votre travail
+                    </p>
+                    <p class="formule-contact">
+                        Contactez : <a href="mailto:dojoacting@gmail.com">dojoacting@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Philosophie Section -->
